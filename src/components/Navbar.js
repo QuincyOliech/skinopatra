@@ -1,15 +1,11 @@
-import React,{useState} from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import Search from "./Search";
 
 
 
-function Navbar() {
-  const [search,setSearch]=useState("");
-    // function to search transaction in string format
-    function setSearchString(str){
-      setSearch(str);
-  }
+function Navbar({setSearchString}) {
+ 
 
   return (
     <div>
@@ -60,9 +56,9 @@ function Navbar() {
                 <NavLink to="/register" className="btn btn-outline-dark ms-4">
                     <i className="fa fa-user-plus me-2"></i>Register</NavLink>
                 <NavLink to="/cart" className="btn btn-outline-dark ms-4 me-4">
-                    <i className="fa fa-shopping-cart me-2"></i>Cart(1)</NavLink>
+                    <i className="fa fa-shopping-cart me-2"></i>Cart(0)</NavLink>
             </div>
-            <Search search={search} setSearchString={setSearchString}/>
+            <Search setSearchString={setSearchString}/>
           </div>
         </div>
       </nav>

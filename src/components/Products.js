@@ -3,29 +3,19 @@ import { NavLink } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
 
-function Products (){
+function Products ({search}){
 
    const[products,setProducts]= useState ([]);
-   const[filter,setFilter]= useState (products);
    const[loading,setLoading]= useState (false);
-   let uploadedComponent=true;
+//    const [filter,setFilter]= useState ([]);
+   
 
-   useEffect(()=>{
-    const getProducts = async () =>{
-        setLoading(true);
-        const response=await fetch("http://localhost:8001/products");
-        if (uploadedComponent){
-            setProducts(await response.clone().json());
-            setFilter(await response.json());
-            setLoading(false);
-            console.log(filter)
-        }
-        return ()=>{
-            uploadedComponent=false;
-        }
-    }
-    getProducts();
-   },[]);
+
+    useEffect(() => {
+        fetch("http://localhost:8001/products")
+        .then((response) =>response.json())
+        .then((data)=>setProducts(data))
+    },[]) 
    
    function Loading (){
     return (
@@ -45,17 +35,28 @@ function Products (){
         </>
     )
    }
+   const filteredProducts = products.filter((product)=>{
+    return product.category.toLowerCase().includes(search.toLowerCase())
+   })
+
+  
    function filterProduct(category){
-    const updatedList=products.filter((x) =>x.category === category);
-    setFilter(updatedList);
+    const updatedList=products.filter((x) =>{
+        if (category==="All"){
+            return true
+        }else{
+            return x.category === category
+        }
+    });
+    setProducts(updatedList)
    }
    function ShowProducts(){
     return (
       <> 
     <div className="buttons d-flex justify-content-center mb-5 pb-5">
-        <button className="btn btn-outline-dark me-2" onClick={()=>setFilter(products)}>All</button>
+        <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("All")}>All</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("cleansers")}>Cleansers</button>
-        <button className="btn btn-outline-dark me-2"onClick={()=>filterProduct("treatments and serums")}>Treatments And Serums</button>
+        <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("treatments and serums")}>Treatments And Serums</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("moisturizers")}>Moisturizers</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("bath & body")}>Bath & Body</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("body scrubs & exfoliators")}>Body Scrubs & Exfoliators</button>
@@ -66,7 +67,7 @@ function Products (){
         >Lip Care</button>
         
     </div>
-    {filter.map((product)=>{
+    {products.map((product)=>{
         return (
             <>
               <div className="col-md-3 mb-4">

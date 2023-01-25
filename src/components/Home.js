@@ -1,7 +1,7 @@
 import React from "react";
-import Products from "./Products";
+import Products from "./Products"
 
-function Home() {
+function Home({search}) {
   return (
     <div className="hero">
       <div className="card bg-dark text-white border-0 mt-5">
@@ -21,7 +21,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Products />
+      <Products search={search}/>
     </div>
   );
 }

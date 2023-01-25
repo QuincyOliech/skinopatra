@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../components/App.css'
 import Navbar from './Navbar';
 import Home from './Home';
@@ -11,16 +11,23 @@ import Footer from './Footer';
 import Register from '../pages/Register';
 
 function App() {
+  const [search,setSearch]=useState("");
+  // function to search transaction in string format
+  function setSearchString(str){
+    setSearch(str);
+    
+}
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar/>
+      <Navbar setSearchString={setSearchString}/>
          {/* {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       } */}
         <Routes>
           <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/products" element={<Products/>}/>
+          <Route exact path="/products" element={<Products search={search}/>}/>
           <Route exact path="/products/:id" element={<Product/>}/>
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/login" element={<Login/>}/>
