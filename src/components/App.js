@@ -5,6 +5,7 @@ import Home from './Home';
 import {Routes, Route} from 'react-router-dom';
 import Products from './Products';
 import Product from './Product';
+import About from '../pages/About';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/products" element={<Products/>}/>
           <Route exact path="/products/:id" element={<Product/>}/>
+          <Route exact path="/about" element={<About/>}/>
         </Routes>
       </header>
     </div>
