@@ -7,12 +7,16 @@ import Products from './Products';
 import Product from './Product';
 import About from '../pages/About';
 import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Navbar/>
+         {/* {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+      } */}
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/products" element={<Products/>}/>
