@@ -7,6 +7,7 @@ import Products from './Products';
 import Product from './Product';
 import About from '../pages/About';
 import Login from '../pages/Login';
+import Footer from './Footer';
 import Register from '../pages/Register';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/login" element={<Login/>}/>
         </Routes>
+        <Footer/>
       </header>
     </div>
   );
