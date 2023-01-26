@@ -20,62 +20,6 @@
   margin-bottom: 50px;
 }
 /* login page styling */
-/* .login-component {
-  text-align: center;
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  color: black;
-}
-
-.auth-form-container, .login-form, .register-form {
-  display: flex;
-  flex-direction: column;
-  background: palevioletred;
-}
-
-@media screen and (min-width: 600px) {
-  .auth-form-container {
-    padding: 5rem;
-    border: 1px solid;
-    border-radius: 10px;
-    margin: 0.5rem;
-  }
-}
-
-.login-label {
-  text-align: left;
-  padding: 0.25rem 0;
-}
-
-.login-input {
-  margin: 0.5rem 0;
-  padding: 10px;
-  border: solid 1px bold;
-  border-radius: 5px;
-}
-
-.login-button {
-  border: none;
-  background-color:white;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.link-btn{
-  background-color: aqua;
-  font-weight: bold;
-  border-radius: 5px;
-}
-.password{
-  border: solid 1px bold;
-  text-align: left;
-  font-size: 17px;
-} */
 .login {
   font-family: sans-serif;
   display: flex;
@@ -140,4 +84,26 @@ input[type="submit"]:hover {
   flex-direction: column;
   gap: 8px;
   margin: 10px;
+}
+.product-form-container{
+ margin-top: 40px; 
+}
+.add-product-h4{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.add-product-button{
+  text-align: center;
+
+}
+.add-btn{
+  border-radius: 5px; 
+  background-color: palevioletred;
+  font-weight: bold;
+  padding: 10px;
+  color:white;
+}
+.add-btn:hover{
+  background-color: rgb(211, 20, 84);
 }

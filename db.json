@@ -107,6 +107,22 @@
       "price": "40",
       "image": "https://images.pexels.com/photos/4672476/pexels-photo-4672476.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "id": 11
+    },
+    {
+      "title": "Lip Balm ",
+      "category": "lip care",
+      "description": "A nourishing lip balm to protect against dryness and provide long-lasting care for the delicate lip area. A blend of plant-based oils effectively moisturises, making rough and chapped lips feel velvety soft again.",
+      "price": "10",
+      "image": "https://images.pexels.com/photos/6167864/pexels-photo-6167864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 12
+    },
+    {
+      "title": "Exfoliating Wooden Brush",
+      "category": "Body Scrubs & exfoliators",
+      "description": "DecorRack Wood Bath Brush with Natural Bristle, Detachable Wooden Handle for Exfoliating Back, Body, and Feet, Promotes Healthy Smooth Skin",
+      "price": "18",
+      "image": "https://images.pexels.com/photos/6621326/pexels-photo-6621326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 13
     }
   ]
 }

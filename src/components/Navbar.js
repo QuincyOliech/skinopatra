@@ -45,7 +45,7 @@ function Navbar({setSearchString}) {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/createproductform">
-                  Create Product Form
+                  Add Product
                 </NavLink>
               </li>
             </ul>
@@ -53,8 +53,6 @@ function Navbar({setSearchString}) {
             <div className="buttons">
                 <NavLink to="/login" className="btn btn-outline-dark">
                     <i className="fa fa-sign-in me-2"></i>Login</NavLink>
-                <NavLink to="/register" className="btn btn-outline-dark ms-4">
-                    <i className="fa fa-user-plus me-2"></i>Register</NavLink>
                 <NavLink to="/cart" className="btn btn-outline-dark ms-4 me-4">
                     <i className="fa fa-shopping-cart me-2"></i>Cart(0)</NavLink>
             </div>

@@ -119,7 +119,7 @@ import {
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
                   <MDBIcon icon="home" className="me-2" />
-                  Nairobi, NBO 00100, KE
+                  Nairobi, 00100, KE
                 </p>
                 <p>
                   <MDBIcon icon="envelope" className="me-3" />
