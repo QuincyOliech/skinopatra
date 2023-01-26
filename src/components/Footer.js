@@ -56,22 +56,37 @@ import {
                 <h6 className="text-uppercase fw-bold mb-4">Products</h6>
                 <p>
                   <a href="#!" className="text-reset">
-                    Angular
+                    Cleansers
                   </a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    React
+                    Treatments and serums
                   </a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    Vue
+                    Moisturizers
                   </a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    Laravel
+                    Bath and body
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Body scrubs & exfoliators
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Tools & Devices
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Eye Care
                   </a>
                 </p>
               </MDBCol>

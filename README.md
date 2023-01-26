@@ -24,7 +24,9 @@ json-server --watch db.json --port 8001
 JSON file linked using Railway to retrieve the product data and app deployed on Netlify.
 ## Core Deliverables
 A user should be able to:
-See images of all products rendered in product collection and add an Item to the list of products,functionality to be restricted to the admin side.
+ * See images of all products rendered in product collection 
+ * add an Item to the list of products,functionality to be restricted to the admin side
+ * add to cart and checkout, functionality will be updated accordingly at a later time
 
 ### Endpoints for Core Deliverables
 #### GET /products
@@ -56,7 +58,7 @@ Linet Oliech
 
 ## Contact Information
 • Email : oliechlin@gmail.com
-* * *
-License
+
+## License
 MIT License  
 Copyright (c) 2023 Linet Oliech

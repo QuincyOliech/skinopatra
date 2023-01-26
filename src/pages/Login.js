@@ -1,30 +1,86 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
-function Login (props){
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+function Login() {
+  // React States
+  const [errorMessages, setErrorMessages] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
+  // User Login info
+  const database = [
+    {
+      username: "user1",
+      password: "pass1"
+    },
+    {
+      username: "user2",
+      password: "pass2"
     }
+  ];
 
-    return (
-        <div className="login-component">
-            <div className="auth-form-container">
-            <h2>Login</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label className="login-label" htmlFor="email">email</label>
-                <input className="login-input"value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-                <label htmlFor="password">password</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-                <button className="login-button" type="submit">Log In</button>
-            </form>
-            <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+  const errors = {
+    uname: "invalid username",
+    pass: "invalid password"
+  };
+
+  const handleSubmit = (event) => {
+    //Prevent page reload
+    event.preventDefault();
+
+    let { uname, pass } = document.forms[0];
+
+    // Find user login info
+    const userData = database.find((user) => user.username === uname.value);
+
+    // Compare user info
+    if (userData) {
+      if (userData.password !== pass.value) {
+        // Invalid password
+        setErrorMessages({ name: "pass", message: errors.pass });
+      } else {
+        setIsSubmitted(true);
+      }
+    } else {
+      // Username not found
+      setErrorMessages({ name: "uname", message: errors.uname });
+    }
+  };
+
+  // Generate JSX code for error message
+  const renderErrorMessage = (name) =>
+    name === errorMessages.name && (
+      <div className="login-error">{errorMessages.message}</div>
+    );
+
+  // JSX code for login form
+  const renderForm = (
+    <div className="login-form">
+      <form onSubmit={handleSubmit}>
+        <div className="login-input-container">
+          <label>Username </label>
+          <input type="text" name="uname" required />
+          {renderErrorMessage("uname")}
         </div>
+        <div className="login-input-container">
+          <label>Password </label>
+          <input type="password" name="pass" required />
+          {renderErrorMessage("pass")}
         </div>
-        
-    )
+        <div className="login-button-container">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  );
+
+  return (
+    <div className="login">
+      <div className="login-form">
+        <div className="login-title">Log In</div>
+        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+      </div>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
