@@ -8,7 +8,7 @@ function About() {
       <div className="container text-center">
         <div className="row align-items-start">
           <div className="col">
-            <p className="about-text fs-4 fst-italic mt-5">
+            <p className="about-text fs-5 fst-italic mt-5">
               Skinopatra is a cautiously created idea of conveying nature to
               your doorstep.We trust that nobody ought to need to trade off
               their wellbeing for beauty. Together with our brands, we are

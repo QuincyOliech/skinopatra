@@ -10,7 +10,7 @@ function Navbar({setSearchString}) {
   return (
     <div className="main-navbar position-">
       <div className="navbar-announcement">Free Shipping on Orders above $60 !!</div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm me-4">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm me-4 mx-1">
         <div className="container">
           <NavLink className="navbar-brand fw-bold fs-2 text-warning" to="/">
             SKINOPATRA.
@@ -27,7 +27,7 @@ function Navbar({setSearchString}) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mx-1 mb-2 mb-lg">
               <li className="nav-item">
                 <NavLink className="nav-link active" aria-current="page" to="/">
                   Home
