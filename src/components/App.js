@@ -9,6 +9,7 @@ import About from '../pages/About';
 import Login from '../pages/Login';
 import Footer from './Footer';
 import Register from '../pages/Register';
+import CreateProductForm from '../pages/CreateProductForm';
 
 function App() {
   const [search,setSearch]=useState("");
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/products/:id" element={<Product/>}/>
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/login" element={<Login/>}/>
+          <Route exact path="/createproductform" element={<CreateProductForm/>}/>
         </Routes>
         <Footer/>
       </header>

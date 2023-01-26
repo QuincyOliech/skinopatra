@@ -44,8 +44,8 @@ function Navbar({setSearchString}) {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
+                <NavLink className="nav-link" to="/createproductform">
+                  Create Product Form
                 </NavLink>
               </li>
             </ul>
