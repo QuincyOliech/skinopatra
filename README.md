@@ -2,12 +2,20 @@
 Welcome to Skinopatra, a skincare brand that has cautiously created idea of conveying nature to your doorstep.We trust that nobody ought to need to trade off their wellbeing for beauty.
 ## Goals
 Implement a mini web app to practice components, props, state, events, and data fetching in react
-## Instructions
-For this project, you’ll be building out a React application that displays a list of available products, among other features.
+## SetUp Instruction
+For this project, you’ll be building out a React application that displays a list of available products, among other features.Text editor used is Visual Studio Code.
 ## Requirements
 1. It is a single page application (only one index.html file) created using create-react-app
 2. App uses at least 5 components in a way that keeps code well organized
 3. There should be at least 3 client-side routes using react-routerLinks to an external site. A json-server is used to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
+## Technologies Used
+1. HTML
+2. MdBootstrap
+3. React
+4. CSS
+5. JavaScript
+6. Font Awesome
+7. Bootstrap
 ## Setup
 1. In a new terminal, run `npm start`. This will run your React app on port `3000`.
 2. Run this command to get the backend started:
@@ -16,7 +24,7 @@ json-server --watch db.json --port 8001
 JSON file linked using Railway to retrieve the product data and app deployed on Netlify.
 ## Core Deliverables
 A user should be able to:
-See images of all products rendered in product collection.
+See images of all products rendered in product collection and add an Item to the list of products,functionality to be restricted to the admin side.
 
 ### Endpoints for Core Deliverables
 #### GET /products
@@ -43,3 +51,12 @@ Example Response:
     "image": "https://images.pexels.com/photos/8131585/pexels-photo-8131585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
 ]
+## Author 
+Linet Oliech
+
+## Contact Information
+• Email : oliechlin@gmail.com
+* * *
+License
+MIT License  
+Copyright (c) 2023 Linet Oliech
