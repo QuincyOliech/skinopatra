@@ -7,7 +7,7 @@ function Product (){
     const[product,setProduct]=useState([]);
     const[loading,setLoading]=useState(false);
 
-    useEffect(() =>{
+    useEffect((id) =>{
         const getProduct=async () => {
             setLoading(true);
             const response = await fetch (`http://localhost:8001/products/${id}`);

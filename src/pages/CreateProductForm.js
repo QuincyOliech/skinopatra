@@ -52,7 +52,7 @@ function CreateProductForm(){
                 <input className="form-control" name="description" type="text" placeholder="Description" required/>
             </div>
             <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
-                <input className="form-control" name="price" type="text"  placeholder="Price" required />
+                <input className="form-control" name="price" type="text"  placeholder="Price" required/>
             </div>
             <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
                 <input className="form-control" name="image" type="url" placeholder="Image url" required/>

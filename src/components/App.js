@@ -8,7 +8,6 @@ import Product from './Product';
 import About from '../pages/About';
 import Login from '../pages/Login';
 import Footer from './Footer';
-import Register from '../pages/Register';
 import CreateProductForm from '../pages/CreateProductForm';
 
 function App() {

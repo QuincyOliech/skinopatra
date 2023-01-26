@@ -139,22 +139,6 @@
       "price": "8",
       "image": "https://images.pexels.com/photos/7418924/pexels-photo-7418924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 15
-    },
-    {
-      "title": "New Lip Balm",
-      "category": "lip care",
-      "description": "A nourishing lip balm to protect against dryness and provide long-lasting care for the delicate lip area. A blend of plant-based oils effectively moisturises, making rough and chapped lips feel velvety soft again.",
-      "price": "10",
-      "image": "https://images.pexels.com/photos/4672476/pexels-photo-4672476.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      "id": 16
-    },
-    {
-      "title": "Moisture",
-      "category": "cleanser",
-      "description": "vegan",
-      "price": "18",
-      "image": "https://images.pexels.com/photos/6683000/pexels-photo-6683000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 17
     }
   ]
 }

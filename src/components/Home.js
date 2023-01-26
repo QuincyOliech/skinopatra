@@ -6,16 +6,19 @@ function Home({search}) {
     <div className="hero">
       <div className="card bg-dark text-white border-0 mt-5">
         <img
-          src="/gallery/back.jpg"
+          src="/gallery/skin.jpg"
           className="card-img"
           alt="Background"
           height="600px"
         />
         <div className="card-img-overlay d-flex flex-column justify-content-center">
-          <div className="container">
-            <h5 className="card-title display-5 fw-bolder mb-0">DISCOVER SKINOPATRA</h5>
-            <p className="card-text fs-5 fw-bold text-warning">
-              Developed with your needs in mind, delivering on our promise to
+          <div className="home-container">
+            <h5 className="card-title display-5 fw-bolder mb-3">DISCOVER SKINOPATRA</h5>
+            <p className="card-text fs-5 fw-bold ">
+              Developed with your needs in mind,
+            </p>
+            <p className="card-text fs-5 fw-bold ">
+              delivering on our promise to
               provide nature-based affordable skincare solutions
             </p>
           </div>
