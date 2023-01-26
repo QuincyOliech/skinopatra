@@ -7,14 +7,15 @@ function Products ({search}){
 
    const[products,setProducts]= useState ([]);
    const[loading,setLoading]= useState (false);
-//    const [filter,setFilter]= useState ([]);
+   const [productsToDisplay,setproductsToDisplay]= useState ([]);
    
-
-
     useEffect(() => {
         fetch("http://localhost:8001/products")
         .then((response) =>response.json())
-        .then((data)=>setProducts(data))
+        .then((data)=>{
+            setProducts(data)
+            setproductsToDisplay(data)
+        })
     },[]) 
    
    function Loading (){
@@ -35,11 +36,7 @@ function Products ({search}){
         </>
     )
    }
-   const filteredProducts = products.filter((product)=>{
-    return product.category.toLowerCase().includes(search.toLowerCase())
-   })
-
-  
+    
    function filterProduct(category){
     const updatedList=products.filter((x) =>{
         if (category==="All"){
@@ -48,9 +45,37 @@ function Products ({search}){
             return x.category === category
         }
     });
-    setProducts(updatedList)
+    setproductsToDisplay(updatedList)
    }
-   function ShowProducts(){
+   console.log(productsToDisplay)
+   const filteredProducts=productsToDisplay.filter((product)=>{
+    if (search===""){
+        return true
+    }else{
+        return product.category.toLowerCase().includes(search.toLowerCase())
+    }
+    
+   }) 
+   console.log(filteredProducts)
+   
+    return(
+        <div>
+            <div className="container my-3 py-5">
+                <div className="row">
+                    <div className="col-12 mb-5">
+                        <h1 className="display-6-fw-bolder text-center">Categories</h1>
+                        <hr/>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    {loading? <Loading/>:<ShowProducts products={filteredProducts} filterProduct={filterProduct}/>}
+                </div>
+            </div>
+           
+        </div>
+    )
+}
+function ShowProducts({products,filterProduct}){
     return (
       <> 
     <div className="buttons d-flex justify-content-center mb-5 pb-5">
@@ -86,22 +111,5 @@ function Products ({search}){
     </> 
     )
    }
-    return(
-        <div>
-            <div className="container my-3 py-5">
-                <div className="row">
-                    <div className="col-12 mb-5">
-                        <h1 className="display-6-fw-bolder text-center">Categories</h1>
-                        <hr/>
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    {loading? <Loading/>:<ShowProducts key={products}/>}
-                </div>
-            </div>
-           
-        </div>
-    )
-}
 
 export default Products;

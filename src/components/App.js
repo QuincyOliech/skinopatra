@@ -26,7 +26,7 @@ function App() {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       } */}
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<Home search={search}/>}/>
           <Route exact path="/products" element={<Products search={search}/>}/>
           <Route exact path="/products/:id" element={<Product/>}/>
           <Route exact path="/about" element={<About/>}/>
