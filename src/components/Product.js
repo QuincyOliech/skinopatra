@@ -6,8 +6,8 @@ function Product (){
     const {id}=useParams();
     const[product,setProduct]=useState([]);
     const[loading,setLoading]=useState(false);
-
-    useEffect((id) =>{
+ 
+    useEffect(() =>{
         const getProduct=async () => {
             setLoading(true);
             const response = await fetch (`http://localhost:8001/products/${id}`);
@@ -17,6 +17,7 @@ function Product (){
         getProduct();
     },[]);
     
+
     function Loading (){
         return (
             <>
@@ -65,7 +66,7 @@ function Product (){
         <div>
             <div className="container py-5 ">
             <div className="row justify-content-center py-5">
-                    {loading? <Loading/>:<ShowProduct key={id}/>}
+                    {loading? <Loading/>:<ShowProduct/>}
                 </div>
             </div>
 

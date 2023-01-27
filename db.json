@@ -139,6 +139,14 @@
       "price": "8",
       "image": "https://images.pexels.com/photos/7418924/pexels-photo-7418924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 15
+    },
+    {
+      "title": "Eucalyptus Moisturizer",
+      "category": "moisturizer",
+      "description": "Moisturizer",
+      "price": "40",
+      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 16
     }
   ]
 }
