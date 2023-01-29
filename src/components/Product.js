@@ -1,6 +1,8 @@
 import React, {useState,useEffect} from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
+import Swal from 'sweetalert';
+
 
 function Product (){
     const {id}=useParams();
@@ -15,8 +17,27 @@ function Product (){
             setLoading(false);
         }
         getProduct();
-    },[]);
-    
+    },[]
+    );
+
+    function handleClick(e){
+        fetch(`http://localhost:8001/products/${id}`,{
+        method: 'DELETE',
+        }
+        )
+        setProduct(product.filter((product)=>product.id!==id))
+
+        // e.preventDefault()
+
+        //   Swal.fire({
+        //     title: 'Success',
+        //     text: 'Deleted successfully',
+        //     icon: 'success',
+        //     confirmButtonText: 'Exit',
+        //     confirmButtonColor:"green"
+        //   })
+          
+    }
 
     function Loading (){
         return (
@@ -57,9 +78,9 @@ function Product (){
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
                         Go to Cart
                     </NavLink>
-                    <button className="delete-btn btn-outline-dark px-4 py-2 ms-2">
-                        Delete
-                    </button>
+                    <NavLink to="/products" onClick={handleClick} className="btn  px-4 py-2 btn-danger ms-2">
+                        DELETE
+                    </NavLink>
                    
                     
                 </div>

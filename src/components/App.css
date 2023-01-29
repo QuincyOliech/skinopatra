@@ -108,8 +108,8 @@ input[type="submit"]:hover {
   background-color: rgb(211, 20, 84);
 }
 .delete-btn{
-  background-color: red;
-  border-radius: 5px;
-  height:40px;
+  /* border-radius: 5px;
   text-align:center;
+  font-size: 13px;
+  font-weight: bolder; */
 }
