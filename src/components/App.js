@@ -10,6 +10,7 @@ import Login from '../pages/Login';
 import Footer from './Footer';
 import Cart from '../pages/Cart';
 import CreateProductForm from '../pages/CreateProductForm';
+import Update from '../pages/Update';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/cart" element={<Cart/>}/>
           <Route exact path="/createproductform" element={<CreateProductForm/>}/>
+          <Route exact path="/update/:id" element={<Update/>}/>
         </Routes>
         
         <Footer/>

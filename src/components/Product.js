@@ -8,6 +8,11 @@ function Product (){
     const {id}=useParams();
     const[product,setProduct]=useState([]);
     const[loading,setLoading]=useState(false);
+    // const [title, setTitle] = useState("")
+    // const [category, setCategory] = useState("")
+    // const [description, setDescription] = useState("")
+    // const [price, setPrice]=useState("")
+    // const [image, setImage]=useState("")
  
     useEffect(() =>{
         const getProduct=async () => {
@@ -22,12 +27,11 @@ function Product (){
 
     function handleClick(e){
         fetch(`http://localhost:8001/products/${id}`,{
-        method: 'DELETE',
-        }
-        )
-        setProduct(product.filter((product)=>product.id!==id))
-
-        // e.preventDefault()
+        method: 'DELETE'
+        }).then(response => response.json())
+        .then(data=>{
+          return  setProduct(product.filter((product)=>product.id!==id))
+        })
 
         //   Swal.fire({
         //     title: 'Success',
@@ -78,7 +82,8 @@ function Product (){
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
                         Go to Cart
                     </NavLink>
-                    <NavLink to="/products" onClick={handleClick} className="btn  px-4 py-2 btn-danger ms-2">
+                    <NavLink to={`/update/${id}`} className="btn btn-outline-primary ms-2 px-4 py-2">Update</NavLink>
+                    <NavLink to="/products" onClick={handleClick} className="btn btn-danger ms-2 px-4 py-2">
                         DELETE
                     </NavLink>
                    
@@ -88,6 +93,7 @@ function Product (){
             </>
         )
     }
+
     return (
         <div>
             <div className="container py-5 ">

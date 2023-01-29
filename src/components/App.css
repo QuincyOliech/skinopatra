@@ -107,9 +107,16 @@ input[type="submit"]:hover {
 .add-btn:hover{
   background-color: rgb(211, 20, 84);
 }
-.delete-btn{
-  /* border-radius: 5px;
-  text-align:center;
-  font-size: 13px;
-  font-weight: bolder; */
+
+.update-btn{
+  border-radius: 5px; 
+  background-color:rgb(26, 185, 239);
+  font-weight: bold;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  color:white;
+
+  
 }
+
