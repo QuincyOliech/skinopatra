@@ -142,11 +142,27 @@
     },
     {
       "title": "Eucalyptus Moisturizer",
-      "category": "moisturizer",
+      "category": "moisturizers",
       "description": "Moisturizer",
       "price": "40",
       "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 16
+    },
+    {
+      "title": "Strawberry Toner",
+      "category": "cleansers",
+      "description": "skin product",
+      "price": "40",
+      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 17
+    },
+    {
+      "title": "Orange Tonic",
+      "category": "cleansers",
+      "description": "skin product",
+      "price": "32",
+      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 18
     }
   ]
 }

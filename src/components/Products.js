@@ -17,7 +17,7 @@ function Products ({search}){
             setproductsToDisplay(data)
         })
     },[]) 
-   
+
    function Loading (){
     return (
         <>
@@ -47,7 +47,7 @@ function Products ({search}){
     });
     setproductsToDisplay(updatedList)
    }
-   console.log(productsToDisplay)
+
    const filteredProducts=productsToDisplay.filter((product)=>{
     if (search===""){
         return true
