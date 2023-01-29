@@ -4,7 +4,7 @@ Welcome to Skinopatra, a skincare brand that has cautiously created idea of conv
 * Implement a mini web app to practice components, props, state, events, and data fetching in react.
 * Implement all CRUD methods.
 ## SetUp Instruction
-For this project, you’ll be building out a React application that displays a list of available products, among other features.Text editor used is Visual Studio Code.
+For this project, you’ll be building out a React application that displays a list of available products,updates the product details, deletes the product, posts the product to site and backend among other features. The text editor used is Visual Studio Code.
 ## Requirements
 1. It is a single page application (only one index.html file) created using create-react-app
 2. App uses at least 5 components in a way that keeps code well organized
@@ -31,6 +31,10 @@ A user should be able to:
  * update item details 
 
 ### Endpoints for Core Deliverables
+
+### POST /products/${id}
+### PATCH /products/${id}
+#### DELETE /products/${id}
 #### GET /products
 Example Response:
 [
