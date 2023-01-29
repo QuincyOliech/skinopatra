@@ -1,8 +1,8 @@
 # Skinopatra
 Welcome to Skinopatra, a skincare brand that has cautiously created idea of conveying nature to your doorstep.We trust that nobody ought to need to trade off their wellbeing for beauty.
 ## Goals
-Implement a mini web app to practice components, props, state, events, and data fetching in react
-Implement all CRUD methods
+* Implement a mini web app to practice components, props, state, events, and data fetching in react.
+* Implement all CRUD methods.
 ## SetUp Instruction
 For this project, you’ll be building out a React application that displays a list of available products, among other features.Text editor used is Visual Studio Code.
 ## Requirements
@@ -34,7 +34,7 @@ A user should be able to:
 #### GET /products
 Example Response:
 [
-  {
+  * {
     "id": 1,
     "title": "Beautique Serum",
     "category":"treatments and serums",
@@ -44,7 +44,7 @@ Example Response:
     "itemsSold": 7,
     "image": "https://images.pexels.com/photos/8101532/pexels-photo-8101532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
-    {
+    * {
      "id": 2,
     "title": "Beautique Toner",
     "category":"cleansers",
