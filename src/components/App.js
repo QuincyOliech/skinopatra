@@ -6,11 +6,12 @@ import {Routes, Route} from 'react-router-dom';
 import Products from './Products';
 import Product from './Product';
 import About from '../pages/About';
-import Login from '../pages/Login';
 import Footer from './Footer';
-import Cart from '../pages/Cart';
 import CreateProductForm from '../pages/CreateProductForm';
 import Update from '../pages/Update';
+import Login from '../pages/Login';
+import Cart from '../pages/Cart';
+
 
 
 function App() {

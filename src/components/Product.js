@@ -32,14 +32,13 @@ function Product (){
         .then(data=>{
           return  setProduct(product.filter((product)=>product.id!==id))
         })
-
-        //   Swal.fire({
-        //     title: 'Success',
-        //     text: 'Deleted successfully',
-        //     icon: 'success',
-        //     confirmButtonText: 'Exit',
-        //     confirmButtonColor:"green"
-        //   })
+        Swal.fire({
+            title: 'Success',
+            text: 'Updated successfully',
+            icon: 'success',
+            confirmButtonText: 'Exit',
+            confirmButtonColor:"blue"
+          })
           
     }
 

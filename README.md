@@ -2,6 +2,7 @@
 Welcome to Skinopatra, a skincare brand that has cautiously created idea of conveying nature to your doorstep.We trust that nobody ought to need to trade off their wellbeing for beauty.
 ## Goals
 Implement a mini web app to practice components, props, state, events, and data fetching in react
+Implement all CRUD methods
 ## SetUp Instruction
 For this project, you’ll be building out a React application that displays a list of available products, among other features.Text editor used is Visual Studio Code.
 ## Requirements
@@ -22,11 +23,12 @@ For this project, you’ll be building out a React application that displays a l
 json-server --watch db.json --port 8001
 ## Endpoints
 JSON file linked using Railway to retrieve the product data and app deployed on Netlify.
-## Core Deliverables
+## Core Deliverables 
 A user should be able to:
  * See images of all products rendered in product collection 
  * add an Item to the list of products,functionality to be restricted to the admin side
- * add to cart and checkout, functionality will be updated accordingly at a later time
+ * delete an Item from the list of products
+ * update item details 
 
 ### Endpoints for Core Deliverables
 #### GET /products

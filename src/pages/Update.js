@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from 'react'
-import Swal from 'sweetalert2'
+
 
 function Update() {
   const [title, setTitle] = useState("")
@@ -48,9 +48,7 @@ function Update() {
         .then((r)=>r.json())
         .then(product=>{
           navigate("/products/"+product.id)
-        }
-      
-        )
+        })
 
     }
 
