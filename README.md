@@ -1,4 +1,4 @@
-# Project Description
+# Skinopatra
 Welcome to Skinopatra, a skincare brand that has cautiously created idea of conveying nature to your doorstep.We trust that nobody ought to need to trade off their wellbeing for beauty.
 ## Goals
 * Implement a mini web app to practice components, props, state, events, and data fetching in react.
@@ -36,10 +36,10 @@ A user should be able to:
  * delete an Item from the list of products
  * update item details 
 ## Screenshots
- * ![Alt text](./public/gallery/herosection.png)
- * ![Alt text](./public/gallery/product.png)
- * ![Alt text](./public/gallery/delete.png)
- * ![Alt text](./public/gallery/update.png)
+  ![Alt text](./public/gallery/herosection.png)
+  ![Alt text](./public/gallery/product.png)
+  ![Alt text](./public/gallery/delete.png)
+ ![Alt text](./public/gallery/update.png)
 
 ## Author & License
 Linet Oliech is the sole contributor to this project. Project is licensed and author does not grant permissions for Commercial use, Reproduction, Distribution, Modification, Patent and Private use.Copyright (c) 2023 Linet Oliech
