@@ -1,4 +1,4 @@
-# Skinopatra
+# Project Description
 Welcome to Skinopatra, a skincare brand that has cautiously created idea of conveying nature to your doorstep.We trust that nobody ought to need to trade off their wellbeing for beauty.
 ## Goals
 * Implement a mini web app to practice components, props, state, events, and data fetching in react.
@@ -8,7 +8,7 @@ For this project, you’ll be building out a React application that displays a l
 ## Requirements
 1. It is a single page application (only one index.html file) created using create-react-app
 2. App uses at least 5 components in a way that keeps code well organized
-3. There should be at least 3 client-side routes using react-routerLinks to an external site. A json-server is used to create a RESTful API for your backend and make both a GET and a POST request to the json server. 
+3. There are at least 3 client-side routes using react-routerLinks to an external site. A json-server is used to create a RESTful API for the backend and makes a GET, POST, PATCH and DELETE request to the json server. 
 ## Technologies Used
 1. HTML
 2. MdBootstrap
@@ -17,54 +17,35 @@ For this project, you’ll be building out a React application that displays a l
 5. JavaScript
 6. Font Awesome
 7. Bootstrap
+8. SweetAlert 
 ## Setup
-1. In a new terminal, run `npm start`. This will run your React app on port `3000`.
-2. Run this command to get the backend started:
-json-server --watch db.json --port 8001
+1. Install nvm on your machine, if not already installed.
+2. Fork the repository.
+3. Create a new branch in your terminal.
+4. Download the files.
+5. Initialize the db.json file from the console in the adjacent directory.Run this command  to get the backend started: json-server --watch db.json --port 8001
+6. Run `npm start` on your machine to initialize the project.This will run your React app on port `3000`.
+
 ## Endpoints
 JSON file linked using Railway to retrieve the product data and app deployed on Netlify.
 ## Core Deliverables 
 A user should be able to:
- * See images of all products rendered in product collection 
+ * See images of all products rendered in product collection from the database
  * add an Item to the list of products,functionality to be restricted to the admin side
+ * search for product categories 
  * delete an Item from the list of products
  * update item details 
+## Screenshots
+ * ![Alt text](./public/gallery/herosection.png)
+ * ![Alt text](./public/gallery/product.png)
+ * ![Alt text](./public/gallery/delete.png)
+ * ![Alt text](./public/gallery/update.png)
 
-### Endpoints for Core Deliverables
-
-### POST /products/${id}
-### PATCH /products/${id}
-#### DELETE /products/${id}
-#### GET /products
-Example Response:
-[
-  * {
-    "id": 1,
-    "title": "Beautique Serum",
-    "category":"treatments and serums",
-    "description": "Contains 10% Niacinamide (Vitamin B3) and 5.7% Zinc PCA which work together to reduce hyperpigmentation, blemishes, control sebum production, even out the skin tone and texture.",
-    "price": "15",
-    "totalItems": 30,
-    "itemsSold": 7,
-    "image": "https://images.pexels.com/photos/8101532/pexels-photo-8101532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    * {
-     "id": 2,
-    "title": "Beautique Toner",
-    "category":"cleansers",
-    "description": "Toner is infused with 1% PHA, Hyaluronic Acid, Kombucha and African Rooibos Leaf Extract to protect the skin barrier by balancing skin pH.",
-    "price": "20",
-    "totalItems": 50,
-    "itemsSold": 20,
-    "image": "https://images.pexels.com/photos/8131585/pexels-photo-8131585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      }
-]
-## Author 
-Linet Oliech
+## Author & License
+Linet Oliech is the sole contributor to this project. Project is licensed and author does not grant permissions for Commercial use, Reproduction, Distribution, Modification, Patent and Private use.Copyright (c) 2023 Linet Oliech
 
 ## Contact Information
-• Email : oliechlin@gmail.com
+For any queries or enquiries feel free to reach out at oliechlin@gmail.com
 
-## License
-MIT License  
-Copyright (c) 2023 Linet Oliech
+
+

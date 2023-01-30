@@ -116,7 +116,10 @@ input[type="submit"]:hover {
   width: 100px;
   text-align: center;
   color:white;
-
-  
+}
+.h3-update{
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: bold;
 }
 

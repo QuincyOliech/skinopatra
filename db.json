@@ -5,7 +5,7 @@
       "title": "Niacinamide Serum",
       "category": "treatments and serums",
       "description": "Contains 10% Niacinamide (Vitamin B3) and 5.7% Zinc PCA which work together to reduce hyperpigmentation, blemishes, control sebum production, even out the skin tone and texture.",
-      "price": "15",
+      "price": "25",
       "totalItems": 30,
       "itemsSold": 7,
       "image": "https://images.pexels.com/photos/8101532/pexels-photo-8101532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -151,26 +151,10 @@
     {
       "title": "Strawberry Toner",
       "category": "cleansers",
-      "description": "skin product",
+      "description": "skin care product",
       "price": "40",
       "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 17
-    },
-    {
-      "title": "Orange Tonic",
-      "category": "cleansers",
-      "description": "skin cleanser product",
-      "price": "35",
-      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 18
-    },
-    {
-      "title": "Orange Moisturizer",
-      "category": "cleansers",
-      "description": "orange scented moisturizer",
-      "price": "25",
-      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 20
     }
   ]
 }

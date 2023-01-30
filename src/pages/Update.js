@@ -56,7 +56,7 @@ function Update() {
   return (
     <div className="update-container">
     <div className='container my-5 py-2'>
-      <h3>Update</h3>
+      <h3 className='h3-update'>Update</h3>
       <form onSubmit={handleSubmit}>
           <div className="mb-4 col-md-7 ">
             <input type="text" className="form-control" value={title || ''} onChange={function(e){setTitle(e.target.value)}} placeholder="Title" />
