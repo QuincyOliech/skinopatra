@@ -141,20 +141,36 @@
       "id": 15
     },
     {
-      "title": "Eucalyptus Moisturizer",
-      "category": "moisturizers",
-      "description": "Moisturizer",
-      "price": "40",
-      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Orange Eye Oil",
+      "category": "cleansers",
+      "description": "Orange scented oil",
+      "price": "32",
+      "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 16
     },
     {
-      "title": "Strawberry Toner",
+      "title": "Orange Eye Oil",
       "category": "cleansers",
-      "description": "skin care product",
-      "price": "40",
-      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 17
+      "description": "Orange scented oil",
+      "price": "32",
+      "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 16
+    },
+    {
+      "title": "Orange Eye Oil",
+      "category": "cleansers",
+      "description": "Orange scented oil",
+      "price": "32",
+      "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 16
+    },
+    {
+      "title": "Orange Eye Oil",
+      "category": "cleansers",
+      "description": "Orange scented oil",
+      "price": "32",
+      "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 16
     }
   ]
 }

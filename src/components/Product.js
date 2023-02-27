@@ -75,16 +75,22 @@ function Product (){
                         $ {product.price}
                     </h3>
                     <p className="lead">{product.description}</p>
+                 
                     <button className="btn btn-outline-dark px-4 py-2">
                         Add to Cart
+                    </button>
+                    <button className="btn btn-outline-dark px-4 py-2 ms-2">
+                        Remove from Cart
                     </button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
                         Go to Cart
                     </NavLink>
                     <NavLink to={`/update/${id}`} className="btn btn-outline-primary ms-2 px-4 py-2">Update</NavLink>
-                    <NavLink to="/products" onClick={handleClick} className="btn btn-danger ms-2 px-4 py-2">
+                    <NavLink to="/products" onClick={handleClick} className="btn btn-danger px-4 py-2 mt-2">
                         DELETE
                     </NavLink>
+                    
+                   
                    
                     
                 </div>

@@ -12,6 +12,12 @@
   justify-content: center;
   font-size: 16px;
 }
+.navbar-nav{
+  font-size: 17px;
+}
+.navbar-brand{
+  letter-spacing: 6px;
+}
 .about-title{
   text-align: center;
   font-weight: bolder;
@@ -19,8 +25,9 @@
   margin-top: 30px;
   margin-bottom: 50px;
 }
+
 /* login page styling */
-.login {
+/* .login {
   font-family: sans-serif;
   display: flex;
   align-items: center;
@@ -84,6 +91,9 @@ input[type="submit"]:hover {
   flex-direction: column;
   gap: 8px;
   margin: 10px;
+} */
+.product-image{
+ 
 }
 .product-form-container{
  margin-top: 40px; 

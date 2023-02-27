@@ -6,12 +6,11 @@ import {Routes, Route} from 'react-router-dom';
 import Products from './Products';
 import Product from './Product';
 import About from '../pages/About';
+import Contact from '../pages/Contact';
 import Footer from './Footer';
 import CreateProductForm from '../pages/CreateProductForm';
 import Update from '../pages/Update';
 import Login from '../pages/Login';
-import Cart from '../pages/Cart';
-
 
 
 function App() {
@@ -26,17 +25,13 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Navbar setSearchString={setSearchString}/>
-      {/* <Cart/> */}
-         {/* {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
-      } */}
         <Routes>
           <Route exact path="/" element={<Home search={search}/>}/>
           <Route exact path="/products" element={<Products search={search}/>}/>
           <Route exact path="/products/:id" element={<Product/>}/>
           <Route exact path="/about" element={<About/>}/>
+          <Route exact path="/contact" element={<Contact/>}/>
           <Route exact path="/login" element={<Login/>}/>
-          <Route exact path="/cart" element={<Cart/>}/>
           <Route exact path="/createproductform" element={<CreateProductForm/>}/>
           <Route exact path="/update/:id" element={<Update/>}/>
         </Routes>
