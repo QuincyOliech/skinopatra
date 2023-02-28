@@ -1,5 +1,5 @@
 {
-  "products": [
+  "products": [ 
     {
       "id": 1,
       "title": "Niacinamide Serum",
@@ -154,7 +154,7 @@
       "description": "Orange scented oil",
       "price": "32",
       "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 16
+      "id": 17
     },
     {
       "title": "Orange Eye Oil",
@@ -162,7 +162,7 @@
       "description": "Orange scented oil",
       "price": "32",
       "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 16
+      "id": 18
     },
     {
       "title": "Orange Eye Oil",
@@ -170,7 +170,7 @@
       "description": "Orange scented oil",
       "price": "32",
       "image": "https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 16
+      "id": 19
     }
   ]
 }

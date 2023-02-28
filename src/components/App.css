@@ -92,8 +92,13 @@ input[type="submit"]:hover {
   gap: 8px;
   margin: 10px;
 } */
-.product-image{
+.products-img{
+  transition: all 0.5s ease;
  
+}
+.products-img:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 .product-form-container{
  margin-top: 40px; 

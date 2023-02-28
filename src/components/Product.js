@@ -2,10 +2,13 @@ import React, {useState,useEffect} from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import Swal from 'sweetalert';
+import { useDispatch } from "react-redux";
+import {addItem, removeItem} from "../redux/actions/index"
 
 
 function Product (){
     const {id}=useParams();
+    const [cartBtn, setCartBtn] = useState("Add to Cart");
     const[product,setProduct]=useState([]);
     const[loading,setLoading]=useState(false);
     // const [title, setTitle] = useState("")
@@ -17,7 +20,7 @@ function Product (){
     useEffect(() =>{
         const getProduct=async () => {
             setLoading(true);
-            const response = await fetch (`http://localhost:8001/products/${id}`);
+            const response = await fetch (`http://localhost:9292/products/${id}`);
             setProduct(await response.json());
             setLoading(false);
         }
@@ -26,7 +29,7 @@ function Product (){
     );
 
     function handleClick(e){
-        fetch(`http://localhost:8001/products/${id}`,{
+        fetch(`http://localhost:9292/products/${id}`,{
         method: 'DELETE'
         }).then(response => response.json())
         .then(data=>{
@@ -41,7 +44,19 @@ function Product (){
           })
           
     }
+    
+    const dispatch = useDispatch()
 
+    const handleCart = (product) => {
+        if (cartBtn === "Add to Cart"){
+            dispatch(addItem(product))
+            setCartBtn("Remove from Cart")
+        }
+        else{
+            dispatch(removeItem(product))
+            setCartBtn("Add to Cart")
+        }
+    }
     function Loading (){
         return (
             <>
@@ -60,6 +75,8 @@ function Product (){
             </>
         )
        }
+
+       
     function ShowProduct(){
         return (
             <>
@@ -76,17 +93,12 @@ function Product (){
                     </h3>
                     <p className="lead">{product.description}</p>
                  
-                    <button className="btn btn-outline-dark px-4 py-2">
-                        Add to Cart
-                    </button>
-                    <button className="btn btn-outline-dark px-4 py-2 ms-2">
-                        Remove from Cart
-                    </button>
+                    <button onClick={()=>handleCart(product)} className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
                         Go to Cart
                     </NavLink>
                     <NavLink to={`/update/${id}`} className="btn btn-outline-primary ms-2 px-4 py-2">Update</NavLink>
-                    <NavLink to="/products" onClick={handleClick} className="btn btn-danger px-4 py-2 mt-2">
+                    <NavLink to="/products" onClick={handleClick} className="btn btn-danger ms-2 px-4 py-2 mb-1">
                         DELETE
                     </NavLink>
                     

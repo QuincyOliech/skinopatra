@@ -10,7 +10,7 @@ function Products ({search}){
    const [productsToDisplay,setproductsToDisplay]= useState ([]);
    
     useEffect(() => {
-        fetch("http://localhost:8001/products")
+        fetch("http://localhost:9292/products")
         .then((response) =>response.json())
         .then((data)=>{
             setProducts(data)
@@ -93,9 +93,9 @@ function ShowProducts({products,filterProduct}){
     {products.map((product,index)=>{
         return (
            
-              <div className="col-md-3 mb-4" key={index}>
+              <div className="products-img col-md-4 mb-4 mt-4 " key={index}>
               <div className="card h-100 text-center p-4" key={product.id}>
-                <img src={product.image} className="card-img-top" alt={product.title} height="300px"/>
+                <img src={product.image} className="card-img-top" alt={product.title} height="400px"/>
                 <div className="card-body">
                     <h5 className="card-title mb-0">{product.title}</h5>
                     <p className="card-text lead fw-bold">${product.price}</p>

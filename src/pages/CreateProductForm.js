@@ -42,19 +42,19 @@ function CreateProductForm(){
         <div className="product-form-container">
             <h4 className="add-product-h4">Add Product</h4>
             <form className="form-content" onSubmit={handleSubmit}>
-             <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
+             <div className="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
                 <input className="form-control col-md-4"  name="title" type="text" placeholder="Title" required />
              </div>
-             <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
+             <div className="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
                 <input className="form-control" name="category" type="text" placeholder="Category" required/>
             </div>   
-            <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
+            <div className="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
                 <input className="form-control" name="description" type="text" placeholder="Description" required/>
             </div>
-            <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
+            <div className="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
                 <input className="form-control" name="price" type="text"  placeholder="Price" required/>
             </div>
-            <div class="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
+            <div className="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
                 <input className="form-control" name="image" type="url" placeholder="Image url" required/>
             </div>
             <div className="add-product-button">
