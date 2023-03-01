@@ -20,11 +20,11 @@ function Contact (){
                     <form>
                     <div className="mb-3">
                         <label for="exampleForm" className="form-label">Full Name</label>
-                        <input type="text" className="form-control" id="exampleForm" placeholder="Jane Doe"/>
+                        <input type="text" className="form-control" id="exampleForm" placeholder="Jane Doe" required/>
                     </div>
                     <div className="mb-3">
                         <label for="exampleFormControlInput1" className="form-label">Email Address</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required/>
                     </div>
                     <div className="mb-3">
                         <label for="exampleFormControlTextarea1" className="form-label">Example Textarea</label>

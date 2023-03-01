@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
+import Review from "./Review"
 import Swal from 'sweetalert2'
 
 function Product (){
@@ -73,7 +74,7 @@ function Product (){
                         $ {product.price}
                     </h3>
                     <p className="lead">{product.description}</p>
-                    <p className="lead">{product.reviews}</p>
+                    <p> <div className="display-review">{ product.reviews && product.reviews.map((review)=> <Review key={review.id} product ={review}/>)}</div></p>
                  
                     <button className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
@@ -99,6 +100,7 @@ function Product (){
             <div className="row justify-content-center py-5">
                     {loading? <Loading/>:<ShowProduct/>}
                 </div>
+                {/* <div className="display-review">{ product.reviews && product.reviews.map((review)=> <Review key={review.id} product ={review}/>)}</div> */}
             </div>
 
         </div>

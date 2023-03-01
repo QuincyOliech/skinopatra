@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Search from "./Search";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-// import Cart from "../pages/Cart";
+import Cart from "../pages/Cart";
 
 
 
@@ -55,7 +55,13 @@ function Navbar({setSearchString}) {
                 <SignUp/>
                 <Login/>
             </div>
-            {/* <Cart/> */}
+            <NavLink className="nav-link" to="/cart">
+              <button type="button" className="btn btn-outline-primary me-2 ms-2">
+                  <span className="fa-solid fa-cart-shopping me-2"></span>
+                    Cart
+              </button>
+            </NavLink>
+            
             <Search setSearchString={setSearchString}/>
           </div>
         </div>

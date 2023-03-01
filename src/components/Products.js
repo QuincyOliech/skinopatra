@@ -92,7 +92,7 @@ function ShowProducts({products,filterProduct}){
     </div>
     {products.map((product,index)=>{
         return (
-           
+       
               <div className="products-img col-md-4 mb-4 mt-4 " key={index}>
               <div className="card h-100 text-center p-4" key={product.id}>
                 <img src={product.image_url} className="card-img-top" alt={product.title} height="400px"/>
