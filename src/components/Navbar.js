@@ -11,7 +11,7 @@ function Navbar({setSearchString}) {
  
 
   return (
-    <div className="main-navbar position-">
+    <div className="main-navbar">
       <div className="navbar-announcement">Free Shipping on Orders above $60 !!</div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm me-4 mx-1">
         <div className="container-fluid">
@@ -60,6 +60,7 @@ function Navbar({setSearchString}) {
           </div>
         </div>
       </nav>
+      
     </div>
   );
 }

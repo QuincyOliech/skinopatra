@@ -13,7 +13,7 @@ function Contact (){
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-5 d-flex justify-content-center">
+                    <div className="col-md-5 d-flex justify-content-center me-5">
                         <img src="/gallery/contact.svg" alt="Contact Us" height="300px" width="500px" />
                     </div>
                     <div className="col-md-6">

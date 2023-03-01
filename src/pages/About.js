@@ -41,7 +41,7 @@ function About() {
           <NavLink to="/contact" className="btn btn-outline-dark mt-5 px-3">Contact Us</NavLink>
         </div>
         <div className="col-md-6 d-flex justify-content-center">
-          <img className="about-image" src="/gallery/about.svg" alt="About Us" height="500px" width="500px"/>
+          <img className="about-image" src="/gallery/aboutus.svg" alt="About Us" height="500px" width="350px"/>
         </div>
       </div>
     </div>
