@@ -2,9 +2,6 @@ import React, {useState,useEffect} from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import Swal from 'sweetalert';
-import { useDispatch } from "react-redux";
-import {addItem, removeItem} from "../redux/actions/index"
-
 
 function Product (){
     const {id}=useParams();
@@ -45,18 +42,16 @@ function Product (){
           
     }
     
-    const dispatch = useDispatch()
-
-    const handleCart = (product) => {
-        if (cartBtn === "Add to Cart"){
-            dispatch(addItem(product))
-            setCartBtn("Remove from Cart")
-        }
-        else{
-            dispatch(removeItem(product))
-            setCartBtn("Add to Cart")
-        }
-    }
+    // const handleCart = (product) => {
+    //     if (cartBtn === "Add to Cart"){
+    //         dispatch(addItem(product))
+    //         setCartBtn("Remove from Cart")
+    //     }
+    //     else{
+    //         dispatch(removeItem(product))
+    //         setCartBtn("Add to Cart")
+    //     }
+    // }
     function Loading (){
         return (
             <>
@@ -92,9 +87,9 @@ function Product (){
                         $ {product.price}
                     </h3>
                     <p className="lead">{product.description}</p>
-                    <p className="lead">{product.review}</p>
+                    <p className="lead">{product.reviews}</p>
                  
-                    <button onClick={()=>handleCart(product)} className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
+                    <button className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
                         Go to Cart
                     </NavLink>
