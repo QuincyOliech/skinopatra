@@ -55,7 +55,7 @@ function Update() {
 
   return (
     <div className="update-container">
-    <div className='container my-5 py-2'>
+    <div className='container my-5 py-2 px-5 me-5'>
       <h3 className='h3-update'>Update</h3>
       <form onSubmit={handleSubmit}>
           <div className="mb-4 col-md-7 ">

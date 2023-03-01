@@ -1,18 +1,13 @@
 import React, {useState,useEffect} from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
-import Swal from 'sweetalert';
+import Swal from 'sweetalert2'
 
 function Product (){
     const {id}=useParams();
     const [cartBtn, setCartBtn] = useState("Add to Cart");
     const[product,setProduct]=useState([]);
     const[loading,setLoading]=useState(false);
-    // const [title, setTitle] = useState("")
-    // const [category, setCategory] = useState("")
-    // const [description, setDescription] = useState("")
-    // const [price, setPrice]=useState("")
-    // const [image, setImage]=useState("")
  
     useEffect(() =>{
         const getProduct=async () => {
@@ -32,26 +27,17 @@ function Product (){
         .then(data=>{
           return  setProduct(product.filter((product)=>product.id!==id))
         })
+
         Swal.fire({
             title: 'Success',
-            text: 'Updated successfully',
+            text: 'Updated Successfully',
             icon: 'success',
             confirmButtonText: 'Exit',
-            confirmButtonColor:"blue"
-          })
-          
+            confirmButtonColor:"green"
+          })  
     }
     
-    // const handleCart = (product) => {
-    //     if (cartBtn === "Add to Cart"){
-    //         dispatch(addItem(product))
-    //         setCartBtn("Remove from Cart")
-    //     }
-    //     else{
-    //         dispatch(removeItem(product))
-    //         setCartBtn("Add to Cart")
-    //     }
-    // }
+
     function Loading (){
         return (
             <>
