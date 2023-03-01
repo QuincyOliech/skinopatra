@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from 'react'
+import Swal from 'sweetalert2'
 
 
 function Update() {
@@ -49,6 +50,14 @@ function Update() {
         .then(product=>{
           navigate("/products/"+product.id)
         })
+
+        Swal.fire({
+          title: 'Success',
+          text: 'Updated Successfully',
+          icon: 'success',
+          confirmButtonText: 'Exit',
+          confirmButtonColor:"green"
+        })  
 
     }
 

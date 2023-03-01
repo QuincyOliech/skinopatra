@@ -31,7 +31,7 @@ function Product (){
 
         Swal.fire({
             title: 'Success',
-            text: 'Updated Successfully',
+            text: 'Deleted Successfully',
             icon: 'success',
             confirmButtonText: 'Exit',
             confirmButtonColor:"green"
