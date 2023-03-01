@@ -8,21 +8,21 @@ function Update() {
   const [category, setCategory] = useState("")
   const [description, setDescription] = useState("")
   const [price, setPrice]=useState("")
-  const [image, setImage]=useState("")
+  const [image_url, setImage_url]=useState("")
   // for navigation 
   const navigate=useNavigate()
 
     const {id} = useParams()
 
     useEffect(()=>{
-        fetch(`http://localhost:8001/products/${id}`)
+        fetch(`http://localhost:9292/products/${id}`)
         .then((r)=>r.json())
         .then((product)=>{
             setTitle(product.title)
             setCategory(product.category)
             setDescription(product.description)
             setPrice(product.price)
-            setImage(product.image)
+            setImage_url(product.image_url)
         })
 
     },[])
@@ -31,7 +31,7 @@ function Update() {
     {
      e.preventDefault()
 
-     fetch(`http://localhost:8001/products/${id}`,{
+     fetch(`http://localhost:9292/products/${id}`,{
         method:"PATCH",
         headers: {
             "Content-Type":"application/json",
@@ -42,7 +42,7 @@ function Update() {
             category: category, 
             description: description, 
             price: price, 
-            image: image
+            image_url: image_url
         })
      })
         .then((r)=>r.json())
@@ -82,7 +82,7 @@ function Update() {
           </div>
           <div className="mb-4 col-md-7 ">
             
-            <input type="text" className="form-control" value={image || ''} onChange={(e)=> setImage(e.target.value)} placeholder="Image" />
+            <input type="text" className="form-control" value={image_url || ''} onChange={(e)=> setImage_url(e.target.value)} placeholder="Image" />
           </div>
           <button className="update-btn">Update</button>
 

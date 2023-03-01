@@ -14,7 +14,7 @@ function Contact (){
                 </div>
                 <div className="row">
                     <div className="col-md-5 d-flex justify-content-center">
-                        <img src="http://placehold.it/" alt="Contact Us" height="300px" width="300px" />
+                        <img src="/gallery/contact.svg" alt="Contact Us" height="300px" width="500px" />
                     </div>
                     <div className="col-md-6">
                     <form>
@@ -23,11 +23,11 @@ function Contact (){
                         <input type="text" className="form-control" id="exampleForm" placeholder="Jane Doe"/>
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlInput1" className="form-label">Email address</label>
+                        <label for="exampleFormControlInput1" className="form-label">Email Address</label>
                         <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
                     </div>
                     <div className="mb-3">
-                        <label for="exampleFormControlTextarea1" className="form-label">Example textarea</label>
+                        <label for="exampleFormControlTextarea1" className="form-label">Example Textarea</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <button type="submit" className="btn btn-outline-primary mt-2">Send Message</button>

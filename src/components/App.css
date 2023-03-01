@@ -4,7 +4,7 @@
 }
 .navbar-announcement{
   height: 30px;
-  background-color: palevioletred;
+  background-color: rgb(137, 30, 65);
   color: white;
   font-weight: bolder;
   display: flex;
@@ -114,7 +114,7 @@ input[type="submit"]:hover {
 }
 .add-btn{
   border-radius: 5px; 
-  background-color: palevioletred;
+  background-color: rgb(69, 39, 49);
   font-weight: bold;
   padding: 10px;
   color:white;

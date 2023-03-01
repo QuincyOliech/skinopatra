@@ -12,9 +12,9 @@ function CreateProductForm(){
             category:e.target.category.value,
             description:e.target.description.value,
             price:e.target.price.value,
-            image:e.target.image.value
+            image_url:e.target.image_url.value
         };
-        fetch("http://localhost:8001/products",{
+        fetch("http://localhost:9292/products",{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function CreateProductForm(){
                 <input className="form-control" name="price" type="text"  placeholder="Price" required/>
             </div>
             <div className="form-group col-md-4 mt-4 mb-4 mx-auto d-block">
-                <input className="form-control" name="image" type="url" placeholder="Image url" required/>
+                <input className="form-control" name="image_url" type="url" placeholder="Image url" required/>
             </div>
             <div className="add-product-button">
             <button className="add-btn">Add Product</button>

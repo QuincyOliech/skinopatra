@@ -81,7 +81,7 @@ function Product (){
         return (
             <>
                 <div className="col-md-6">
-                    <img src={product.image} alt={product.title} height="400px" width="400px"/>
+                    <img src={product.image_url} alt={product.title} height="400px" width="400px"/>
                 </div>
                 <div className="col-md-6">
                     <h4 className="text-uppercase text-black-50">
@@ -92,6 +92,7 @@ function Product (){
                         $ {product.price}
                     </h3>
                     <p className="lead">{product.description}</p>
+                    <p className="lead">{product.review}</p>
                  
                     <button onClick={()=>handleCart(product)} className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
