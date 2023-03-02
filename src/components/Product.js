@@ -11,6 +11,7 @@ function Product (){
     const[loading,setLoading]=useState(false);
  
     useEffect(() =>{
+       
         const getProduct=async () => {
             setLoading(true);
             const response = await fetch (`http://localhost:9292/products/${id}`);
@@ -20,6 +21,14 @@ function Product (){
         getProduct();
     },[]
     );
+    // useEffect(()=>{
+    //     fetch(`http://localhost:9292/products/${id}`)
+    //     .then((response) =>response.json())
+    //     .then((data)=>setProduct(data))
+        
+            
+    // }) 
+
 
     function handleClick(e){
         fetch(`http://localhost:9292/products/${id}`,{
@@ -59,7 +68,7 @@ function Product (){
        }
 
        
-    function ShowProduct(){
+    function ShowProduct({product}){
         return (
             <>
                 <div className="col-md-6">
@@ -74,7 +83,7 @@ function Product (){
                         $ {product.price}
                     </h3>
                     <p className="lead">{product.description}</p>
-                    <p> <div className="display-review">{ product.reviews && product.reviews.map((review)=> <Review key={review.id} product ={review}/>)}</div></p>
+                     <div className="display-review">{ product.reviews && product.reviews.map((review)=> <Review key={review.id} product ={review}/>)}</div>
                  
                     <button className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
@@ -98,9 +107,8 @@ function Product (){
         <div>
             <div className="container py-5 ">
             <div className="row justify-content-center py-5">
-                    {loading? <Loading/>:<ShowProduct/>}
+                    {loading? <Loading/>:<ShowProduct product={product}/>}
                 </div>
-                {/* <div className="display-review">{ product.reviews && product.reviews.map((review)=> <Review key={review.id} product ={review}/>)}</div> */}
             </div>
 
         </div>

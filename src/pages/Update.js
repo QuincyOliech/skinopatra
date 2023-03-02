@@ -10,6 +10,7 @@ function Update() {
   const [description, setDescription] = useState("")
   const [price, setPrice]=useState("")
   const [image_url, setImage_url]=useState("")
+  const [change, setChange] = useState("")
   // for navigation 
   const navigate=useNavigate()
 
@@ -40,7 +41,7 @@ function Update() {
     },
         body:JSON.stringify({
             title: title, 
-            category: category, 
+            category: change, 
             description: description, 
             price: price, 
             image_url: image_url
@@ -60,6 +61,9 @@ function Update() {
         })  
 
     }
+    function handleChange(e){
+      setChange(e.target.value)
+    }
 
 
   return (
@@ -71,7 +75,7 @@ function Update() {
             <input type="text" className="form-control" value={title || ''} onChange={function(e){setTitle(e.target.value)}} placeholder="Title" />
           </div>
           <div className ="mb-4 col-md-7 ">
-                <select className="form-control" id="Select1">
+                <select onChange={handleChange} value={change} className="form-control" id="Select1">
                 <option>treatments and serums</option>
                 <option>cleansers</option>
                 <option>moisturizers</option>

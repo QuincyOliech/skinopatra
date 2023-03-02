@@ -56,7 +56,7 @@ function Products ({search}){
     }
     
    }) 
-   console.log(filteredProducts)
+  
    
     return(
         <div>
