@@ -12,7 +12,7 @@ function Navbar({setSearchString}) {
 
   return (
     <div className="main-navbar">
-      <div className="navbar-announcement">Free Shipping on Orders above $60 !!</div>
+      <div className="navbar-announcement">Free Shipping on Orders above $160 !!</div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm me-4 mx-1">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

@@ -12,7 +12,7 @@ import CreateProductForm from '../pages/CreateProductForm';
 import Update from '../pages/Update';
 import Login from '../pages/Login';
 import Cart from '../pages/Cart';
-// import CategoryList from "./CategoryList";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -40,10 +40,9 @@ function App() {
           <Route exact path="/createproductform" element={<CreateProductForm/>}/>
           <Route exact path="/update/:id" element={<Update/>}/>
         </Routes>
-        {/* <CategoryList /> */}
-        
         <Footer/>
       </header>
+      <ToastContainer/>
     </div>
   );
 }

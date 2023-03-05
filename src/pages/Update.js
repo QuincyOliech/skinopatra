@@ -1,7 +1,8 @@
 import React from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from 'react'
-import Swal from 'sweetalert2'
+import {toast} from "react-toastify"
+// import Swal from 'sweetalert2'
 
 
 function Update() {
@@ -41,7 +42,8 @@ function Update() {
     },
         body:JSON.stringify({
             title: title, 
-            category: change, 
+            category: category,
+            // category: change, 
             description: description, 
             price: price, 
             image_url: image_url
@@ -51,31 +53,34 @@ function Update() {
         .then(product=>{
           navigate("/products/"+product.id)
         })
+        toast.success('Updated Successfully')
 
-        Swal.fire({
-          title: 'Success',
-          text: 'Updated Successfully',
-          icon: 'success',
-          confirmButtonText: 'Exit',
-          confirmButtonColor:"green"
-        })  
+        // Swal.fire({
+        //   title: 'Success',
+        //   text: 'Updated Successfully',
+        //   icon: 'success',
+        //   confirmButtonText: 'Exit',
+        //   confirmButtonColor:"green"
+        // })  
 
     }
-    function handleChange(e){
-      setChange(e.target.value)
-    }
+    // function handleChange(e){
+    //   setChange(e.target.value)
+    // }
 
 
   return (
     <div className="update-container">
     <div className='container my-5 py-2 px-5 me-5'>
       <h3 className='h3-update'>Update</h3>
-      <form onSubmit={handleSubmit}>
+      <form className="form-content" onSubmit={handleSubmit}>
           <div className="mb-4 col-md-7 ">
             <input type="text" className="form-control" value={title || ''} onChange={function(e){setTitle(e.target.value)}} placeholder="Title" />
           </div>
           <div className ="mb-4 col-md-7 ">
-                <select onChange={handleChange} value={change} className="form-control" id="Select1">
+          <select type="text" className="form-select form-select-m" id="Select1" value={category || ''} onChange={(e)=> setCategory(e.target.value)} placeholder="Category">
+                {/* <select onChange={handleChange} value={change} className="form-select form-select-m" id="Select1"> */}
+                {/* <option>select a category</option> */}
                 <option>treatments and serums</option>
                 <option>cleansers</option>
                 <option>moisturizers</option>

@@ -24,9 +24,9 @@ export default function SummaryPage() {
               <MDBTableHead>
                 <tr>
                   <th scope="col" className="h5">
-                    Shopping Bag
+                    Shopping Cart
                   </th>
-                  <th scope="col">Format</th>
+                  <th scope="col">Category</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Price</th>
                 </tr>
@@ -36,21 +36,21 @@ export default function SummaryPage() {
                   <th scope="row">
                     <div className="d-flex align-items-center">
                       <img
-                        src="https://i.imgur.com/2DsA49b.webp"
+                        src="https://bit.ly/41BEeqy"
                         fluid
                         className="rounded-3"
                         style={{ width: "120px" }}
-                        alt="Book"
+                        alt="product"
                       />
                       <div className="flex-column ms-4">
-                        <p className="mb-2">Thinking, Fast and Slow</p>
-                        <p className="mb-0">Daniel Kahneman</p>
+                        <p className="mb-2">Niacinamide Serum</p>
+              
                       </div>
                     </div>
                   </th>
                   <td className="align-middle">
                     <p className="mb-0" style={{ fontWeight: "500" }}>
-                      Digital
+                      Treatments and Serums
                     </p>
                   </td>
                   <td className="align-middle">
@@ -82,23 +82,21 @@ export default function SummaryPage() {
                   <th scope="row">
                     <div className="d-flex align-items-center">
                       <img
-                        src="https://i.imgur.com/Oj1iQUX.webp"
+                        src="https://bit.ly/41BEeqy"
                         fluid
                         className="rounded-3"
                         style={{ width: "120px" }}
                         alt="Book"
                       />
                       <div className="flex-column ms-4">
-                        <p className="mb-2">
-                          Homo Deus: A Brief History of Tomorrow
-                        </p>
-                        <p className="mb-0">Yuval Noah Harari</p>
+                        <p className="mb-2">Green Tea Cleanser</p>
+                       
                       </div>
                     </div>
                   </th>
                   <td className="align-middle">
                     <p className="mb-0" style={{ fontWeight: "500" }}>
-                      Paperback
+                      Cleansers
                     </p>
                   </td>
                   <td className="align-middle">

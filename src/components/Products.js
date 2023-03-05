@@ -81,7 +81,7 @@ function ShowProducts({products,filterProduct}){
     <div className="buttons d-flex justify-content-center mb-5 pb-5">
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("All")}>All</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("cleansers")}>Cleansers</button>
-        <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("treatments and serums")}>Treatments And Serums</button>
+        <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("treatments and serums")}>Treatments and Serums</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("moisturizers")}>Moisturizers</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("bath & body")}>Bath & Body</button>
         <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("body scrubs & exfoliators")}>Body Scrubs & Exfoliators</button>
