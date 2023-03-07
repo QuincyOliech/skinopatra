@@ -1,33 +1,22 @@
 import React, {useState,useEffect} from "react";
 import { NavLink, useParams } from "react-router-dom";
-import Skeleton from "react-loading-skeleton";
 import Review from "./Review"
 import Swal from 'sweetalert2'
 
 function Product (){
     const {id}=useParams();
-    const [cartBtn, setCartBtn] = useState("Add to Cart");
     const[product,setProduct]=useState([]);
-    const[loading,setLoading]=useState(false);
  
     useEffect(() =>{
        
         const getProduct=async () => {
-            setLoading(true);
             const response = await fetch (`http://localhost:9292/products/${id}`);
             setProduct(await response.json());
-            setLoading(false);
         }
         getProduct();
-    },[]
+    },[id]
     );
-    // useEffect(()=>{
-    //     fetch(`http://localhost:9292/products/${id}`)
-    //     .then((response) =>response.json())
-    //     .then((data)=>setProduct(data))
-        
-            
-    // }) 
+   
 
 
     function handleClick(e){
@@ -46,27 +35,6 @@ function Product (){
             confirmButtonColor:"green"
           })  
     }
-    
-
-    function Loading (){
-        return (
-            <>
-            <div className="col-md-6" style={{lineHeight: "2"}}>
-                <Skeleton height={400}/>
-            </div>
-            <div className="col-md-6">
-                <Skeleton height={50} width={300}/>
-                <Skeleton height={75}/>
-                <Skeleton height={25} width={150}/>
-                <Skeleton height={50}/>
-                <Skeleton height={150}/>
-                <Skeleton height={50} width={100}/>
-                <Skeleton height={50} width={100} style={{marginLeft: "6"}}/>
-            </div>
-            </>
-        )
-       }
-
        
     function ShowProduct({product}){
         return (
@@ -85,7 +53,6 @@ function Product (){
                     <p className="lead">{product.description}</p>
                      <div className="display-review">{ product.reviews && product.reviews.map((review)=> <Review key={review.id} product ={review}/>)}</div>
                  
-                    <button className="btn btn-outline-dark px-4 py-2">{cartBtn}</button>
                     <NavLink to="/cart" className="btn btn-outline-dark px-4 py-2 ms-2">
                         Go to Cart
                     </NavLink>
@@ -107,7 +74,7 @@ function Product (){
         <div>
             <div className="container py-5 ">
             <div className="row justify-content-center py-5">
-                    {loading? <Loading/>:<ShowProduct product={product}/>}
+                  <ShowProduct product={product}/>
                 </div>
             </div>
 

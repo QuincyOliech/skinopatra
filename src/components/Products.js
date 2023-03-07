@@ -1,12 +1,10 @@
 import React, {useState,useEffect} from "react";
 import { NavLink } from "react-router-dom";
-import Skeleton from "react-loading-skeleton";
 
 
 function Products ({search}){
 
    const[products,setProducts]= useState ([]);
-   const[loading,setLoading]= useState (false);
    const [productsToDisplay,setproductsToDisplay]= useState ([]);
    
     useEffect(() => {
@@ -18,24 +16,6 @@ function Products ({search}){
         })
     },[]) 
 
-   function Loading (){
-    return (
-        <>
-        <div className="col-md-3">
-            <Skeleton height={350}/>
-        </div>
-        <div className="col-md-3">
-            <Skeleton height={350}/>
-        </div>
-        <div className="col-md-3">
-            <Skeleton height={350}/>
-        </div>
-        <div className="col-md-3">
-            <Skeleton height={350}/>
-        </div>
-        </>
-    )
-   }
     
    function filterProduct(category){
     const updatedList=products.filter((x) =>{
@@ -68,7 +48,7 @@ function Products ({search}){
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    {loading? <Loading/>:<ShowProducts products={filteredProducts} filterProduct={filterProduct}/>}
+                    <ShowProducts products={filteredProducts} filterProduct={filterProduct}/>
                 </div>
             </div>
            

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Search from "./Search";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import Cart from "../pages/Cart";
+
 
 
 

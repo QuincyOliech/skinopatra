@@ -1,5 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     MDBFooter,
     MDBContainer,
@@ -17,19 +16,19 @@ import {
           </div>
   
           <div>
-            <a href="" className="me-4 text-reset">
+            <a href="/" className="me-4 text-reset">
               <MDBIcon fab icon="facebook-f" />
             </a>
-            <a href="" className="me-4 text-reset">
+            <a href="/" className="me-4 text-reset">
               <MDBIcon fab icon="twitter" />
             </a>
-            <a href="" className="me-4 text-reset">
+            <a href="/" className="me-4 text-reset">
               <MDBIcon fab icon="google" />
             </a>
-            <a href="" className="me-4 text-reset">
+            <a href="/" className="me-4 text-reset">
               <MDBIcon fab icon="instagram" />
             </a>
-            <a href="" className="me-4 text-reset">
+            <a href="/" className="me-4 text-reset">
               <MDBIcon fab icon="linkedin" />
             </a>
           </div>

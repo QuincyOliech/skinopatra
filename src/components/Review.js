@@ -2,7 +2,6 @@ import React from 'react'
 
 const Review = ({product}) => {
   let stars = Array(product.star_rating).fill("★")
-    {stars.join("")}
   return (
     <div className='review-section'>
         <div className='review-score'>{stars.join("")}</div>

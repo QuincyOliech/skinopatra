@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import '../components/App.css'
 import Navbar from './Navbar';
 import Home from './Home';
-import {Routes, Route, Navigate} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Products from './Products';
 import Product from './Product';
 import About from '../pages/About';
@@ -12,13 +12,13 @@ import CreateProductForm from '../pages/CreateProductForm';
 import Update from '../pages/Update';
 import Login from '../pages/Login';
 import Cart from '../pages/Cart';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 
 
 function App() {
   const [search,setSearch]=useState("");
-  const [cart, setCart] = useState([])
+ 
   // function to search transaction in string format
   function setSearchString(str){
     setSearch(str);   
